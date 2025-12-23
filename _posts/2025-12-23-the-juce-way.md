@@ -10,11 +10,15 @@ When you dig a little deeper, you notice the design is deliberate: JUCE follows 
 
 It's like reading a book without having to prefix every word with its part of speech: you don't see `vWrite` for a verb or `nTable` for a noun — you just read and understand what's happening. It feels cleaner, faster, and honestly... liberating - you've internalised it without reading through several layers of encoded flaming hoops.
 
+## Intent without Ceremony
+
+Basically, this means that the purpose of the code is immediately clear. You can see what it does without wading through boilerplate, extra keywords, or unnecessary layers of abstraction.
+
 ## Implicit Patterns in JUCE.
 
 One of the things that surprises new JUCE developers is how patterns appear implicitly. You won't see a class called `IButtonListener` or a prefix screaming `Observer` — but the patterns _are *there*_, made very clear once you understand the framework.
 
-### Example 1: Observer Pattern via `ListenerList`.
+### Example 1: `ListenerList` is the Observer Pattern
 
 ```c++
 class MyComponent : public juce::Component
@@ -46,7 +50,7 @@ private:
 
 Here, `ListenerList` is JUCE's implementation of the observer pattern. There's no extra interface boilerplate, no template gymnastics, and no verbose registration system. It's simple, readable, and gets the job done — the pattern is abstracted, but obvious in context.
 
-### Example 2: Reference Counting via `ReferenceCountedObject`.
+### Example 2: Reference Counting via `ReferenceCountedObject`
 
 ```c++
 class MyData : public juce::ReferenceCountedObject
@@ -60,7 +64,7 @@ public:
 
 This is JUCE's historical approach to `std::shared_ptr`. You don't see `std::shared_ptr` everywhere, but the memory management is clear and automatic. You don't have to annotate or prefix anything; the intent is communicated by the code structure itself.
 
-### Example 3: `AudioFormatReader` / `AudioFormatWriter`, the Facade Pattern.
+### Example 3: `AudioFormatReader` / `AudioFormatWriter` are Facade Patterns
 
 ```c++
 AudioFormatManager formatManager;
@@ -78,11 +82,91 @@ else
 }
 ```
 
-The `AudioFormatManager` acts as a factory, producing readers for whatever file format is needed.
+* The `AudioFormatManager` acts as a factory, producing readers for whatever file format is needed.
+* Each `AudioFormatReader` / `AudioFormatWriter` acts as a facade, providing a simplified interface to complex subsystems that handle different audio formats and codecs.
+* You don't need to know the internal details of WAV, AIFF, or MP3 decoding — the reader hides all that complexity behind a clean, easy-to-use interface.
 
-Each `AudioFormatReader` / `AudioFormatWriter` acts as a facade, providing a simplified interface to complex subsystems that handle different audio formats and codecs.
+### Example 4: `juce::Value` is a Proxy Pattern
 
-You don't need to know the internal details of WAV, AIFF, or MP3 decoding — the reader hides all that complexity behind a clean, easy-to-use interface.
+```c++
+Value volume;
+volume.addListener (this);        // Observer baked in
+volume = 0.8f;                    // Updates underlying value to 0.8f
+float currentVolume = volume;     // Reads value through the proxy
+```
+
+* Acts as a proxy for an underlying data item.
+* You can read/write the value without touching the storage directly.
+* Listeners automatically see changes (caller/controller dependent) — no boilerplate needed.
+
+### Example 5: `LookAndFeel` is a Decorator Pattern
+
+```c++
+class MyLookAndFeel final : public LookAndFeel_V4
+{
+public:
+    void drawButtonBackground (Graphics& g, Button&, const Colour&, bool, bool) override
+    {
+        g.fillAll(Colours::hotpink);
+    }
+};
+
+TextButton button;
+button.setLookAndFeel (&myLookAndFeel);
+```
+
+* Lets you decorate existing components with custom drawing behaviour.
+* You override or augment specific functionality without touching the original component.
+* Implicit decorator — simple, readable, and practical.
+
+### Example 6: `AudioIODeviceCallback` is a Bridge Pattern
+
+```c++
+class MyAudioCallback : public AudioIODeviceCallback
+{
+    void audioDeviceIOCallback (const float** inputChannelData, int numInputChannels,
+                                float** outputChannelData, int numOutputChannels,
+                                int numSamples) override
+    {
+        // processing logic
+    }
+};
+
+device->start (&myCallback);
+```
+
+* Decouples the audio device from the processing logic.
+* AudioIODevice handles the hardware, while your callback handles the processing - a classic bridge.
+* Low-level, modern, and very explicit about intent without ceremony.
+
+### Example 7: `JUCE_DECLARE_SINGLETON` is (Obviously) a Singleton Pattern
+
+```c++
+struct MySingleton
+{
+    MySingleton() {}
+    ~MySingleton()
+    {
+        clearSingletonInstance();
+    }
+
+    JUCE_DECLARE_SINGLETON (MySingleton, false)
+};
+
+// In a .cpp file:
+JUCE_IMPLEMENT_SINGLETON (MySingleton)
+
+// Usage:
+if (auto* instance = MySingleton::getInstance())
+{
+    // use the singleton
+}
+```
+
+* The macros handle the usual singleton boilerplate: static storage, lazy instantiation, and safe cleanup.
+* `getInstance()` provides controlled global access.
+* `clearSingletonInstance()` in the destructor avoids dangling pointers.
+* Demonstrates the singleton pattern in a pragmatic, readable, low‑ceremony JUCE style.
 
 ## Code as Plain English
 
