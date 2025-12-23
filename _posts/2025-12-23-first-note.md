@@ -40,7 +40,7 @@ Some behaviour is controlled by macros that are buried in the module source file
 
 ### Rules are Flexible... Sometimes Too Flexible
 
-JUCE itself occasionally bends its own conventions — the graphics module is split into multiple files to speed up compilation, for example. That's perfectly fine for the framework maintainers, but it sends a mixed signal to kitchen visitors: should we follow this approach in our own dishes? There's no "official” way for users to do it, so consistency relies on experience and judgement.
+JUCE itself occasionally bends its own conventions — the graphics module is split into multiple files to speed up compilation, for example. That's perfectly fine for the framework maintainers, but it sends a mixed signal to kitchen visitors: can we even follow this approach with our own dishes? There's no real way for users to do that, so consistency relies on experience and judgement.
 
 ### Implicit Expectations
 
