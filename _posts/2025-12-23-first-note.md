@@ -52,6 +52,6 @@ JUCE's module system isn't perfect - no kitchen is. Some ingredients are hidden,
 
 CMake, by contrast, is more like a sprawled workshop than a kitchen: flexible, powerful, and theoretically capable of anything — but you spend half your time just figuring out where everything is and how it fits together, and for whatever reason fending off greybearded shop techs that use the same dull tools and ancient, worn out textbooks. JUCE modules, for most application developers, feel like the better kitchen: everything you need is at hand, the workflow is intuitive, and you can focus on baking amazing cakes — or, in our case, building great software.
 
-At the end of the day, understanding the trade-offs is key. Love it or grumble at it, JUCE's module format is a pragmatic, productivity-first design that rewards those willing to learn its quirks. And honestly sometimes a little magic flour under a red moon is worth it for a smooth, speedy bake. (But really, just never go full CMake...)
+At the end of the day, understanding the trade-offs is key. Love it or grumble at it, JUCE's module format is a pragmatic, productivity-first design that rewards those willing to learn its quirks. (But really, just never go full CMake...)
 
 So yes, I like JUCE's module format. A lot. Not because it's flashy - but because it's a kitchen that actually lets you bake.
