@@ -1,0 +1,4 @@
+title: "My Architecture Notes"
+description: "Thoughts on audio engineering, architecture, and problem-solving"
+theme: minima   # default GitHub theme
+plugins: [jekyll-feed]
