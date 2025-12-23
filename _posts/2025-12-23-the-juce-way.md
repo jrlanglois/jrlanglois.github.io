@@ -165,7 +165,8 @@ if (auto* instance = MySingleton::getInstance())
 }
 ```
 
-* The macros handle the usual singleton boilerplate: static storage, lazy instantiation, and safe cleanup.
+* Ironically not _implicit_ - it doesn't get any more obvious than that!
+* The macros handle the usual singleton boilerplate: static storage, lazy instantiation, safe cleanup, threadedness needs...
 * `getInstance()` provides controlled global access.
 * `clearSingletonInstance()` in the destructor avoids dangling pointers.
 * Demonstrates the singleton pattern in a pragmatic, readable, low‑ceremony JUCE style.
