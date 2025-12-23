@@ -6,9 +6,9 @@ date: 2025-12-23
 
 When you first open JUCE as a C++ developer trained on textbooks, it can feel... unconventional. Classes don't have "Interface" or "Abstract" in the name. You won't see every type annotated or prefixed. Members don't start with `m_`. At first, it looks like the framework is skipping steps, ignoring patterns, doing its own thing - maybe even giving the finger to the greybeards of old. (And yes, it’s refreshingly not using COM: no GUIDs, no HRESULTs, no boilerplate that doubles as a test of your patience.)
 
-When you dig a little deeper, you notice the design is deliberate: JUCE follows SOLID, DRY, and RAII principles, among many  — it's just abstracted. The patterns exist, but they're implicit; you don't need to label every class or add a dozen extra layers just to signal intent. The code itself communicates the design.
+When you dig a little deeper, you notice the design is deliberate: JUCE follows SOLID, DRY, and RAII principles, among the many you're already familiar with — it's just abstracted. The patterns exist, but they're implicit; you don't need to label every class or add a dozen extra layers just to signal intent. The code itself communicates the design.
 
-It's like reading English without having to prefix every word with its part of speech: you don't see `vWrite` for a verb or `nTable` for a noun — you just read and understand what's happening. It feels cleaner, faster, and honestly... liberating.
+It's like reading a book without having to prefix every word with its part of speech: you don't see `vWrite` for a verb or `nTable` for a noun — you just read and understand what's happening. It feels cleaner, faster, and honestly... liberating - you've internalised it without reading through several layers of encoded flaming hoops.
 
 ## Implicit Patterns in JUCE.
 
@@ -89,8 +89,8 @@ You don't need to know the internal details of WAV, AIFF, or MP3 decoding — th
 This is the real magic of JUCE: once you understand these implicit patterns, the code reads almost like plain English.
 
 ```c++
-MyData::Ptr p = new MyData();                                 // You know this is a ref-counted, JUCE based, pointer:
-component.addListener (&listener);                            // You know this is a JUCE Component adding a Component::Listener.
+MyData::Ptr p = new MyData();                                 // You know this is a ref-counted - JUCE based - pointer object instance.
+component.addListener (&myObject);                            // You know this is a JUCE Component adding a ComponentListener.
 listeners.call ([](MyListener& l) { l.somethingChanged(); }); // You know this is a ListenerList notifying the registered listeners about somethingChanged().
 ```
 
@@ -98,6 +98,6 @@ You don't need to constantly translate naming conventions, guess at type annotat
 
 # Closing Thoughts
 
-JUCE isn't about following patterns for the sake of labels or ceremony. It's about practical, readable, and maintainable code that communicates its intent clearly. The patterns - observer, reference counting, RAII, and more — are all there, but abstracted in a way that lets you focus on what the code does, not how it's named. For developers willing to learn the framework's idioms, this approach pays off with faster iteration, cleaner design, and code that reads almost like plain English.
+JUCE isn't about following patterns for the sake of labels or ceremony. It's about practical, readable, and maintainable code that communicates its intent clearly. The patterns - observer, reference counting, RAII, factory, facade, and more — they're all there. They're just abstracted in a way that lets you focus on what the code does, not how it's named. For developers willing to learn the framework's idioms, this approach pays off with faster iteration and cleaner design, resulting in code that reads in a straightforward and human-centric way.
 
 In the end, JUCE rewards pragmatism over formality — and that's a lesson any reasonable software developer can appreciate.
