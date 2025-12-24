@@ -1,4 +1,6 @@
 title: "Joël R. Langlois' Blog"
 description: "Thoughts on software engineering, architecture, and problem-solving"
-theme: jekyll-theme-midnight
-plugins: [jekyll-feed]
+plugins:
+  - jekyll-feed
+  - jekyll-remote-theme
+remote_theme: songzivong/dark-minima
