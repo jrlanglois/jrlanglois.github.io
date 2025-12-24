@@ -1,4 +1,4 @@
 title: "Joël R. Langlois' Blog"
 description: "Thoughts on software engineering, architecture, and problem-solving"
-theme: minima   # default GitHub theme
+theme: jekyll-theme-midnight
 plugins: [jekyll-feed]
