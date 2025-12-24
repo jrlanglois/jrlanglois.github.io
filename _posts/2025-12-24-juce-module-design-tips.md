@@ -28,7 +28,7 @@ This importance goes beyond _just names for the sake of names_ - it's communicat
 
 First, you should consider naming your files based on their intents: is it capturing a class definition like an `Array` in [`juce_Array.h`](https://github.com/juce-framework/JUCE/blob/develop/modules/juce_core/containers/juce_Array.h)? Or maybe you're capturing a group of concepts like changing values smoothly in [juce_SmoothedValue.h](https://github.com/juce-framework/JUCE/blob/develop/modules/juce_audio_basics/utilities/juce_SmoothedValue.h)?
 
-With that in mind, I strongly recommend prefixing your filenames with your module name (eg: `juce_Array.h`, `squarepine_EffectProcessorChain.h`). This avoids clashing filenames when searching and listing files, and makes it less confusing to read.
+With that in mind, I strongly recommend prefixing your filenames with your module name (eg: `juce_XYZ.h`, `squarepine_XYZ.h`). This avoids clashing filenames when searching and listing files, and makes it less confusing to read.
 
 As a side note: please stop using plain `Utility` or `Utilities` or `Helpers` as a vague, catch-all bucket file. This is an extraordinarily bad habit and doesn't help consumers internalise the _goal_ of _what_ code needs to be found in these files. You're creating a goose-chase that can be avoided by segregating _concepts_; concepts are searchable.
 
@@ -42,7 +42,7 @@ Let's make it plain with an _in-code_ comparison:
 #include "squarepine_EffectProcessorChain.h"
 ```
 
-Using `find` or `CTRL/CMD+F`, it becomes abundantly clear where a file lives and which module it originates from when applying a concept-specific naming approach.
+Using `find` or `CTRL/CMD+F`, it becomes abundantly clear where a file lives and which module it originates from (or at least _who_ it originates from) when applying a concept-specific naming approach.
 
 #### Definitions
 
