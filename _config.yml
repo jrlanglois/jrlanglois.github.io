@@ -3,4 +3,4 @@ description: "Thoughts on software engineering, architecture, and problem-solvin
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
-remote_theme: songzivong/dark-minima
+remote_theme: cotes2020/jekyll-theme-chirpy
