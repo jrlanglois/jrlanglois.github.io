@@ -17,6 +17,6 @@ Topics you might see:
 
 # About Me
 
-Hey there! I'm a C++ developer obsessed with media apps, plugins, and clever solutions that actually work. I've played with desktops, mobile, smart TVs, consoles, and embedded systems, and I've wrestled with more APIs than I care to admit.
+Hey there! I'm a C++ developer obsessed with media apps, plugins, and clever solutions that actually work. I've played with desktops, mobile, smart TVs, game consoles, and embedded systems, and I've wrestled with more APIs than I care to admit.
 
 I'm always exploring new tools and libraries - mostly to convince myself they'll make life easier. Spoiler: they rarely do. But the thrill of programming? That never fades. And if it's open-source, there's a good chance that I'm poking around the code, contributing patches, or just causing mild chaos (looking at you, JUCE community).
