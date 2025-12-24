@@ -10,7 +10,7 @@ This post collects a set of design tips and common pitfalls I've encountered whi
 
 None of these are theoretical - they're the result of real design considerations, experiences like build failures and portability issues, and general integration pain that only show up once a custom JUCE module becomes a dependency.
 
-With great power comes great responsibility — JUCE modules give you a powerful way to package code for reuse, but that power comes with the responsibility of managing APIs, dependencies, and platform-specific behaviour very carefully.
+With great power comes great responsibility - JUCE modules give you a powerful way to package code for reuse, but that power comes with the responsibility of managing APIs, dependencies, and platform-specific behaviour very carefully.
 
 ## So What's a JUCE Module, Really?
 
