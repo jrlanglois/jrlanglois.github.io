@@ -6,9 +6,9 @@ date: 2025-12-24
 
 # Introduction
 
-This post collects a set of design tips and common pitfalls I’ve encountered while writing and maintaining private and public JUCE modules intended for reuse.
+This post collects a set of design tips and common pitfalls I've encountered while writing and maintaining private and public JUCE modules intended for reuse.
 
-None of these are theoretical - they’re the result of real design considerations, experiences like build failures and portability issues, and general integration pain that only show up once a custom JUCE module becomes a dependency.
+None of these are theoretical - they're the result of real design considerations, experiences like build failures and portability issues, and general integration pain that only show up once a custom JUCE module becomes a dependency.
 
 With great power comes great responsibility — JUCE modules give you a powerful way to package code for reuse, but that power comes with the responsibility of managing APIs, dependencies, and platform-specific behaviour very carefully.
 
@@ -58,7 +58,7 @@ Predictable build behaviour: no hidden macros or unexpected dependencies.
 
 Exposed headers affect all downstream users. You have to be exceptionally cautious when
 
-## Don’t Leak Native or Platform Headers
+## Don't Leak Native or Platform Headers
 
 Avoid exposing platform-specific headers in module headers.
 
@@ -72,7 +72,7 @@ Windows: JUCE_CORE_INCLUDE_COM_SMART_PTR=1 in .cpp if COM helpers are needed.
 
 ## Public Headers ≠ Convenience Headers
 
-Only include what’s needed for the user to consume the module.
+Only include what's needed for the user to consume the module.
 
 Forward-declare where possible.
 
@@ -86,7 +86,7 @@ Use internal helpers instead of pulling in large dependencies unnecessarily.
 
 Every dependency is a hidden obligation for users.
 
-## Avoid “Header-Only by Accident”
+## Avoid "Header-Only by Accident"
 
 Keep definitions, platform logic, and non-template code in .cpp.
 
