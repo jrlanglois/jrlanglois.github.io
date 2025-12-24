@@ -8,9 +8,9 @@ date: 2025-12-23
 
 When you first open JUCE as a C++ developer trained on textbooks, it can feel... unconventional. Classes don't have "Interface" or "Abstract" in the name. You won't see every type annotated or prefixed. Members don't start with `m_`. At first, it looks like the framework is skipping steps, ignoring patterns, doing its own thing - maybe even giving the finger to the greybeards of old. (And yes, it’s refreshingly not using COM: no GUIDs, no HRESULTs, no boilerplate that doubles as a test of your patience.)
 
-When you dig a little deeper, you notice the design is deliberate: JUCE follows SOLID, DRY, and RAII principles, among the many you're already familiar with — it's just abstracted. The patterns exist, but they're implicit; you don't need to label every class or add a dozen extra layers just to signal intent. The code itself communicates the design.
+When you dig a little deeper, you notice the design is deliberate: JUCE follows SOLID, DRY, and RAII principles, among the many you're already familiar with - it's just abstracted. The patterns exist, but they're implicit; you don't need to label every class or add a dozen extra layers just to signal intent. The code itself communicates the design.
 
-It's like reading a book without having to prefix every word with its part of speech: you don't see `vWrite` for a verb or `nTable` for a noun — you just read and understand what's happening. It feels cleaner, faster, and honestly... liberating - you've internalised it without reading through several layers of encoded flaming hoops.
+It's like reading a book without having to prefix every word with its part of speech: you don't see `vWrite` for a verb or `nTable` for a noun - you just read and understand what's happening. It feels cleaner, faster, and honestly... liberating - you've internalised it without reading through several layers of encoded flaming hoops.
 
 ## Intent without Ceremony
 
@@ -18,7 +18,7 @@ Basically, this means that the purpose of the code is immediately clear. You can
 
 ## Implicit Patterns in JUCE.
 
-One of the things that surprises new JUCE developers is how patterns appear implicitly. You won't see a class called `IButtonListener` or a prefix screaming `Observer` — but the patterns _are *there*_, made very clear once you understand the framework.
+One of the things that surprises new JUCE developers is how patterns appear implicitly. You won't see a class called `IButtonListener` or a prefix screaming `Observer` - but the patterns _are *there*_, made very clear once you understand the framework.
 
 ### Example 1: `ListenerList` is the Observer Pattern
 
@@ -50,7 +50,7 @@ private:
 };
 ```
 
-Here, `ListenerList` is JUCE's implementation of the observer pattern. There's no extra interface boilerplate, no template gymnastics, and no verbose registration system. It's simple, readable, and gets the job done — the pattern is abstracted, but obvious in context.
+Here, `ListenerList` is JUCE's implementation of the observer pattern. There's no extra interface boilerplate, no template gymnastics, and no verbose registration system. It's simple, readable, and gets the job done - the pattern is abstracted, but obvious in context.
 
 ### Example 2: Reference Counting via `ReferenceCountedObject`
 
@@ -66,7 +66,7 @@ public:
 
 This is JUCE's historical approach to `std::shared_ptr`. You don't see `std::shared_ptr` everywhere, but the memory management is clear and automatic. You don't have to annotate or prefix anything; the intent is communicated by the code structure itself.
 
-### Example 3: `AudioFormatReader` / `AudioFormatWriter` are Facade Patterns
+### Example 3: `AudioFormatReader` / `AudioFormatWriter` are Façade Patterns
 
 ```c++
 juce::AudioFormatManager formatManager;
@@ -85,8 +85,8 @@ else
 ```
 
 * The `juce::AudioFormatManager` acts as a factory, producing readers for whatever file format is needed.
-* Each `juce::AudioFormatReader` / `juce::AudioFormatWriter` acts as a facade, providing a simplified interface to complex subsystems that handle different audio formats and codecs.
-* You don't need to know the internal details of WAV, AIFF, or MP3 decoding — the reader hides all that complexity behind a clean, easy-to-use interface.
+* Each `juce::AudioFormatReader` / `juce::AudioFormatWriter` acts as a façade, providing a simplified interface to complex subsystems that handle different audio formats and codecs.
+* You don't need to know the internal details of WAV, AIFF, or MP3 decoding - the reader hides all that complexity behind a clean, easy-to-use interface.
 
 ### Example 4: `juce::Value` is a Proxy Pattern
 
@@ -99,7 +99,7 @@ float currentVolume = volume;     // Reads value through the proxy
 
 * Acts as a proxy for an underlying data item.
 * You can read/write the value without touching the storage directly.
-* Listeners automatically see changes (caller/controller dependent) — no boilerplate needed.
+* Listeners automatically see changes (caller/controller dependent) - no boilerplate needed.
 
 ### Example 5: `LookAndFeel` is a Decorator Pattern
 
@@ -119,7 +119,7 @@ button.setLookAndFeel (&myLookAndFeel);
 
 * Lets you decorate existing components with custom drawing behaviour.
 * You override or augment specific functionality without touching the original component.
-* Implicit decorator — simple, readable, and practical.
+* Implicit decorator - simple, readable, and practical.
 
 ### Example 6: `AudioIODeviceCallback` is a Bridge Pattern
 
@@ -181,10 +181,10 @@ component.addListener (&myObject);                             // You know this 
 listeners.call ([] (MyListener& l) { l.somethingChanged(); }); // You know this is a juce::ListenerList notifying the registered listeners about somethingChanged().
 ```
 
-You don't need to constantly translate naming conventions, guess at type annotations, or interpret verbose boilerplate. The code communicates its purpose directly, which makes it easier to read, maintain, and extend. Communication is a core principle here — the framework is designed so the code itself is the primary medium of understanding.
+You don't need to constantly translate naming conventions, guess at type annotations, or interpret verbose boilerplate. The code communicates its purpose directly, which makes it easier to read, maintain, and extend. Communication is a core principle here - the framework is designed so the code itself is the primary medium of understanding.
 
 # Closing Thoughts
 
-JUCE isn't about following patterns for the sake of labels or ceremony. It's about practical, readable, and maintainable code that communicates its intent clearly. The patterns - observer, reference counting, RAII, factory, facade, and more — they're all there. They're just abstracted in a way that lets you focus on what the code does, not how it's named. For developers willing to learn the framework's idioms, this approach pays off with faster iteration and cleaner design, resulting in code that reads in a straightforward and human-centric way.
+JUCE isn't about following patterns for the sake of labels or ceremony. It's about practical, readable, and maintainable code that communicates its intent clearly. The patterns - observer, reference counting, RAII, factory, facade, and more - they're all there. They're just abstracted in a way that lets you focus on what the code does, not how it's named. For developers willing to learn the framework's idioms, this approach pays off with faster iteration and cleaner design, resulting in code that reads in a straightforward and human-centric way.
 
-In the end, JUCE rewards pragmatism over formality — and that's a lesson any reasonable software developer can appreciate.
+In the end, JUCE rewards pragmatism over formality - and that's a lesson any reasonable software developer can appreciate.
