@@ -5,9 +5,9 @@ title: "Welcome"
 
 # Hello, world!
 
-Welcome to my engineering blog and notes corner. Here, I share architectural thoughts, design patterns, and lessons learned—basically the stuff I wish I'd bookmarked for later.
+Welcome to my software engineering blog and notes corner. Here, I share architectural thoughts, design patterns, and lessons learned - basically the stuff I wish existing that I could have had bookmarked for later.
 
-Topics you might see:
+Topics you will see:
 
 * JUCE module design
 * Cross-platform adventures (and misadventures)
