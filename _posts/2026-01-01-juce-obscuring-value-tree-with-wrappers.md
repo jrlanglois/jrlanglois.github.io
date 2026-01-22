@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "When Wrapper Abstractions Obscure juce::ValueTree’s Strengths
+title: "When Wrapper Abstractions Obscure juce::ValueTree’s Strengths"
 date: 2026-01-01
 ---
 
