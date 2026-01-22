@@ -4,7 +4,7 @@ title: "When 'Wrapper' Abstractions Obscure `juce::ValueTree`’s Strengths
 date: 2026-01-01
 ---
 
-## Intro
+# Introduction
 
 I have a strong bias toward explicit ownership and shallow abstractions when using JUCE, especially around `juce::ValueTree`, because debugging state extension and synchronisation already has enough moving parts.
 
@@ -18,7 +18,7 @@ I have a strong bias toward explicit ownership and shallow abstractions when usi
 
 Any wrapper must justify why duplicating or obscuring these behaviours is worth the cost. In other words, if your abstraction makes `juce::ValueTree` harder to reason about, you’ve already lost.
 
-## Next
+# Next
 
 The wrapper introduces an is-a relationship where a has-a relationship would suffice.
 
