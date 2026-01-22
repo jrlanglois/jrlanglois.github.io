@@ -6,9 +6,9 @@ date: 2026-01-21
 
 # Cultivating Software: My Approach to Development
 
-Software isn't static. It's malleable, messy, and constantly changing. I treat it like a system to experiment with, shape, and adapt - sometimes chaotic, always deliberate. Concepts change, approaches change, needs change—and the code should evolve alongside them.
+Software isn't static. It's malleable, messy, and constantly changing. I treat it like a system to experiment with, shape, and adapt - sometimes chaotic, always deliberate. Concepts change, approaches change, needs change - and the code should evolve alongside them.
 
-Here's how I approach building software that actually works—for both the system and the people using it.
+Here's how I approach building software that actually works - for both the system and the people using it.
 
 ## Explore Before You Strategize
 
@@ -42,8 +42,8 @@ Growth isn't just outward-facing features. Some of the most important work happe
 * Exploration fuels strategy: Even small, seemingly “trivial” changes teach you how the system behaves, reveal hidden bottlenecks, and uncover opportunities to make bigger improvements later.
   * You can leverage this approach to further document code, reconceptualise it by revealing patterns that can be separated and reused elsewhere, and so on.
 
-By tending both the visible branches and the underlying soil, the software—and the people working on it—stays strong, adaptable, and resilient.
+By tending both the visible branches and the underlying soil, the software - and the people working on it - stays strong, adaptable, and resilient.
 
 ## TL;DR
 
-Software is malleable. I approach it like a living system: explore to learn its quirks, zoom out to redesign holistically, shape pragmatically, and focus on growth that matters—both externally and internally. Chaos is inevitable; how you guide it is what counts.
+Software is malleable. I approach it like a living system: explore to learn its quirks, zoom out to redesign holistically, shape pragmatically, and focus on growth that matters - both externally and internally. Chaos is inevitable; how you guide it is what counts.
