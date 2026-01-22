@@ -4,8 +4,6 @@ title: "Cultivating Software: My Approach to Development"
 date: 2026-01-21
 ---
 
-# Cultivating Software: My Approach to Development
-
 Software isn't static. It's malleable, messy, and constantly changing. I treat it like a system to experiment with, shape, and adapt - sometimes chaotic, always deliberate. Concepts change, approaches change, needs change - and the code should evolve alongside them.
 
 Here's how I approach building software that actually works - for both the system and the people using it.
