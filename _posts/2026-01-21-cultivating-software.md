@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cultivating Software: My Approach to Development"
-date: 2026-02-01
+date: 2026-01-21
 ---
 
 # Cultivating Software: My Approach to Development
