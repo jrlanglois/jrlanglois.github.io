@@ -6,46 +6,44 @@ date: 2026-02-01
 
 # Cultivating Software: My Approach to Development
 
-Software is malleable. Unlike bricks or steel, code is alive—it can grow, adapt, and be reshaped. The way I approach development treats code like a garden: it requires care, attention, and thoughtful interventions. Concepts change, approaches change, and needs change—and the code should evolve alongside them.
+Software isn't static. It's malleable, messy, and constantly changing. I treat it like a system to experiment with, shape, and adapt - sometimes chaotic, always deliberate. Concepts change, approaches change, needs change—and the code should evolve alongside them.
 
-Here's how I think about cultivating software.
+Here's how I approach building software that actually works—for both the system and the people using it.
 
-## Nurture Understanding Before Planting Ideas
+## Explore Before You Strategize
 
-Before writing any code, I try to understand the soil I'm working with. Every system, whether a greenfield project or a legacy codebase, has its own texture: strengths, weaknesses, and hidden complexities.
+I don't wait to understand everything before touching the code. Sometimes the fastest way to learn a system is to dive in, experiment, and see what breaks. Hacking around isn't reckless - it's exploratory intelligence.
 
-Observe before acting: I study the problem, the existing architecture, and user needs. Jumping straight into implementation is like scattering seeds on unprepared soil—likely to waste effort.
+* Get your hands dirty: Modify, poke, and probe the code to understand its quirks, hidden dependencies, and failure modes.
+* Zoom out and think top-down: As you explore, keep the bigger picture in mind. Look for ways to reformulate solutions holistically, align components, or simplify architecture.
+* Strategize from insight: The combination of bottom-up tinkering and top-down perspective lets you identify high-leverage interventions that are both practical and elegant.
 
-Define the ecosystem: Dependencies, performance limits, team constraints, and workflows all shape what can realistically grow.
+Exploration and tinkering teach you the code's mechanics (typically historical ones), and it will teach you about any preexisting holes, redundancies, possible efficiencies and simplifications, and most importantly it will teach you about any gaps or under representations. On the flip side of the coin, top-down thinking lets you redesign intelligently and deliberately. Together, they let you improve the system in ways that are robust, adaptable, and well-considered.
 
-Visualise growth patterns: Diagrams, data flows, and component interactions help me anticipate edge cases and ensure the software can scale and evolve gracefully.
+## Shape the Code, Don't Baby It
 
-Understanding the environment first lets me plant ideas where they're most likely to flourish.
+Once I know the terrain, I cultivate the code like a living system: flexible, modular, evolving, yet seeking a way to be organised and communicative all at once.
 
-## Cultivate Code With Care
+* Modular design: Components should plug in, swap out, or disappear without collapsing the system.
+* Iterative experimentation: Testing and code review are small experiments - catch chaos early, learn fast, pivot if needed.
+* Pragmatism over dogma: I follow patterns and rules when they serve the system. I ignore them when they don't. The goal isn't purity - it's adaptability.
+  * Being unconventional is perfectly fine, but I consider the reader first in these cases.
 
-Once the soil is ready, I focus on cultivating the code itself. I treat software as something that must be cared for, pruned, and encouraged to grow in healthy ways.
+Code isn't made of metal or concrete, and I definitely won't treat it like a sacred artifact. I guide its shape, prune what doesn't work, and push it to adapt as requirements, concepts, and approaches shift - sometimes it's just plainly to better its use, its integration, or sometimes delete the damn thing altogether because I found a better way to resolve those code smells I couldn't resolve at the time (ie: there's a better way).
 
-Modular design as rows in a garden: Components are structured, separated, and reusable, making the overall system easier to manage and evolve.
+## Grow the Parts That Actually Matter
 
-Incremental validation: I use testing and careful code review like checking moisture or sunlight—small, frequent interventions prevent problems from spreading.
+Growth isn't just outward-facing features. Some of the most important work happens behind the scenes. I focus on both the visible branches and the soil that supports them.
 
-Adaptability over rigidity: Tools, patterns, and practices serve the project, not the other way around. As concepts and requirements change, the code should evolve alongside them.
+* System-level interventions: Refactors, architecture tweaks, and stabilizing the foundation give the system room to evolve without collapsing under its own weight. 
+* Developer experience as infrastructure: Tools, workflows, and documentation aren't fluff - they're the soil that lets ideas take root without chaos.
+  * Consider the "how" for when you use code: if you find yourself taking a long time to get set up, integrating, and building with your new library, maybe your approach is wrong.
+  * Did I mention I hate Cmake?
+* Exploration fuels strategy: Even small, seemingly “trivial” changes teach you how the system behaves, reveal hidden bottlenecks, and uncover opportunities to make bigger improvements later.
+  * You can leverage this approach to further document code, reconceptualise it by revealing patterns that can be separated and reused elsewhere, and so on.
 
-This approach treats code as malleable and evolving rather than a fixed artifact, allowing it to adapt gracefully to new demands.
+By tending both the visible branches and the underlying soil, the software—and the people working on it—stays strong, adaptable, and resilient.
 
-## Cultivate Growth That Matters
+## TL;DR
 
-Not every branch should grow unchecked. In software, as in gardening, growth takes many forms. I focus equally on outward-facing outcomes and the internal ecosystem that supports them.
-
-High-leverage interventions for the system: Architectural improvements, thoughtful refactors, and restructuring that make the codebase more resilient and easier to work with.
-
-Developer experience as fertile soil: Improving tools, documentation, workflows, and interfaces isn't just "internal work"—it ensures that future development can flourish smoothly.
-
-Measure impact beyond immediate output: Growth isn't only about shipping features; it's about making the environment healthier so new ideas can take root without friction.
-
-By tending both the visible branches and the underlying soil, I ensure the software ecosystem thrives—healthy, adaptable, and sustainable over the long term.
-
-## Closing Thoughts
-
-Software is malleable, and my approach treats it as such: understand the environment, cultivate carefully, and focus on growth that strengthens both the system and the people working with it. Like a well-tended garden, healthy software thrives when it's nurtured thoughtfully, adapted intentionally, and grown with purpose.
+Software is malleable. I approach it like a living system: explore to learn its quirks, zoom out to redesign holistically, shape pragmatically, and focus on growth that matters—both externally and internally. Chaos is inevitable; how you guide it is what counts.
