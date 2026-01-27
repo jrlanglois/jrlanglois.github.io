@@ -19,4 +19,6 @@ Topics you will see:
 
 I'm Joël R. Langlois - a C++ developer obsessed with media apps, audio plugins, and clever solutions that actually work. I've played with desktops, mobile, smart TVs, game consoles, and embedded systems, and I've wrestled with more APIs than I care to admit.
 
-I'm always exploring new tools and libraries - mostly to convince myself they'll make life easier. Spoiler: they rarely do. But the thrill of programming? That never fades. And if it's open-source, there's a good chance that I'm poking around the code, contributing patches, or just causing mild chaos (looking at you, JUCE community).
+Since I have broad experience, and 3 different diplomas to support that, you can call me a non-classic specialist. I’m drawn to systems where small structural differences create large behavioural outcomes. I tend to learn across domains, extract the underlying patterns, and reuse those models elsewhere. I care more about interfaces, constraints, and interactions than about domain-specific details.
+
+Hopefully the things I write about here reflect that, and help view the world through my lense of interfaces, and mot objects.
